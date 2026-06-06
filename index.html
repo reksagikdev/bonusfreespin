@@ -7,6 +7,7 @@
 <title>CLAIM BONUS FREESPIN</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,422 +19,250 @@
 }
 
 body{
-    background: url("bg/gambar1.jpg") center/cover no-repeat;
-
+    background: url("bg/gambar22.jpg") center/cover no-repeat fixed;
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:flex-start;
-
-    padding:40px 20px;
-    color:white;
-}
-
-.title{
-    color:white;
-    font-size:24px;
-    margin-bottom:12px;
-    letter-spacing:2px;
-    text-align:center;
-    text-shadow:0 4px 12px rgba(0,0,0,.4);
-
-    position:relative;
-    padding-bottom:2px;
-}
-
-.title::after{
-    content:"";
-    position:absolute;
-
-    left:50%;
-    bottom:0;
-
-    transform:translateX(-50%);
-
-    width:350px;
-    height:3px;
-
-    border-radius:10px;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #60a5fa,
-        #ffffff,
-        #60a5fa,
-        transparent
-    );
-
-    box-shadow:
-        0 0 10px rgba(96,165,250,0.7),
-        0 0 18px rgba(255,255,255,0.35);
+    padding:40px 16px;
+    color:#fff;
 }
 
 /* CONTAINER */
-
 .container{
     width:100%;
     max-width:1100px;
 	min-height:calc(100vh + 200px);
-
 }
 
 /* TITLE */
-
 .title{
-    text-align:center;
-
-    font-size:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+	font-family:'Orbitron',sans-serif;
+    font-size:34px;
     font-weight:800;
+    color:#ffffff;
     letter-spacing:2px;
+    text-align:center;
+    margin-bottom:2px;
+    font-family:'Orbitron',sans-serif;
 
-    margin-bottom:30px;
-
-    color:white;
+    text-shadow:
+        0 0 10px rgba(59,130,246,0.25);
 }
 
-/* MAIN BOX */
+.title-logo{
+    width:55px;
+    height:55px;
+}
 
+/* MAIN BOX (GLASS STYLE) */
 .main-box{
-    background: url("bg/gambar33.jpg") center;
-	border:1px solid #3b82f6;
-
-    border-radius:24px;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding:25px;
-
-    backdrop-filter:none;
-
+    background: rgba(0,0,0,0.25);
+    border:1px solid rgba(96,165,250,0.25);
+    border-radius:18px;
+    padding:22px;
+	margin-top:30px;
+    backdrop-filter: blur(10px);
     box-shadow:
-    0 10px 35px rgba(0,0,0,0.35);
+        0 15px 45px rgba(0,0,0,0.55),
+        0 0 35px rgba(56,189,248,0.12);
 }
 
-/* INPUT AREA */
-
+/* INPUT */
 .input-area{
     width:100%;
-    min-height:200px;
-
-    border-radius:18px;
-
-    border:1px solid #3b82f6;
-
-    background:#0b1220;
-
-    padding:22px;
-
-    font-size:18px;
-    font-weight:500;
-
-    color:white;
-
-    resize:vertical;
+    min-height:170px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.25);
+    padding:14px;
+    font-size:14px;
+    color:#fff;
     outline:none;
-
-    margin-bottom:30px;
-
-    text-align:center;
-
-    box-shadow:
-    inset 0 0 25px rgba(255,255,255,0.03),
-    0 8px 20px rgba(0,0,0,0.25);
-	
-	display:flex;
-	align-items:center;
-	justify-content:center;
+    resize:vertical;
+    margin-bottom:18px;
 }
 
+.input-area:focus{
+    border-color:#60a5fa;
+    box-shadow:0 0 0 3px rgba(96,165,250,0.15);
+}
 
-/* TABLE */
-
+/* TABLE WRAPPER */
 .table-wrapper{
-    width:100%;
-    overflow:hidden;      
-    border-radius:18px;   
-    margin-bottom:30px;
-}
-
-table{
-    width:100%;
-    table-layout: fixed;
-    border:1px solid #3b82f6;
-    border-spacing: 0;         
-    background:white;
-    color:#111827;
-}
-
-/* HEADER */
-
-th{
-    background:#0b1220;
-
-    color:white;
-
-    padding:16px 10px;
-
-    font-size:13px;
-    font-weight:700;
-
-    text-align:center;
-
+    overflow:hidden;
+    border-radius:14px;
     border:1px solid rgba(255,255,255,0.08);
 }
 
-/* BODY */
-
-td{
-    height:70px;
-
-    text-align:center;
-
-    border:1px solid #e5e7eb;
-
-    font-size:14px;
-    font-weight:500;
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
 }
 
+/* HEADER */
+th{
+    background: url("bg/gambar22.jpg") center/cover no-repeat fixed;
+    color:#dbeafe;
+    padding:14px 10px;
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-right:1px solid rgba(255,255,255,0.05);
+    box-shadow: inset 0 -1px 0 rgba(96,165,250,0.2);
+}
+
+th:last-child{
+    border-right:none;
+}
+
+/* ROW */
 tbody tr{
     transition:0.2s;
 }
 
+tbody tr:nth-child(even){
+    background:#fafafa;
+}
+
 tbody tr:hover{
-    background:#f8fafc;
+    background:rgba(59,130,246,0.06);
+}
+
+/* CELL */
+td{
+    background:#fff;
+    color:#111827;
+    padding:10px;
+    border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+/* INPUT / SELECT */
+td input,
+td select{
+    width:100%;
+    background:#f9fafb;
+    color:#0f172a;
+    border:1px solid rgba(59,130,246,0.15);
+    border-radius:10px;
+    padding:8px;
+    font-size:13px;
+    outline:none;
+    transition:0.2s;
+}
+
+td input:focus,
+td select:focus{
+    border-color:#60a5fa;
+    box-shadow:0 0 0 3px rgba(59,130,246,0.12);
+}
+
+/* 🔥 KOLOM TOTAL MENANG (HALUS & PREMIUM) */
+td:nth-child(7){
+    background:#f1f5f9;
+    font-weight:800;
+    color:#0f172a;
+    position:relative;
+    box-shadow: inset 0 0 0 1px rgba(56,189,248,0.12);
+}
+
+/* garis kecil HALUS di atas saja (bukan full kiri) */
+td:nth-child(7)::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:60%;
+    height:2px;
+    background:rgba(56,189,248,0.35);
+    border-radius:2px;
 }
 
 /* BUTTON */
-
 .copy-btn{
+    width:100%;
+    height:52px;
+    margin-top:16px;
+    border:none;
+    border-radius:14px;
+    font-size:16px;
+    font-weight:800;
+    cursor:pointer;
+    color:white;
+
+    background: linear-gradient(135deg,#2563eb,#06b6d4);
+    box-shadow:0 10px 25px rgba(37,99,235,0.35);
+
     position:relative;
     overflow:hidden;
-
-    width:180px;
-    height:50px;
-
-    border:1px solid #3b82f6;
-    border-radius:16px;
-
-    background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
-
-    color:white;
-    font-size:20px;
-    font-weight:700;
-
-    cursor:pointer;
-
-    display:block;
-    margin:0 auto;
-
-    box-shadow:0 10px 25px rgba(37,99,235,0.35);
+    transition:0.2s;
 }
 
-/* 🔥 garis shine tipis */
+.copy-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* shine */
 .copy-btn::before{
     content:"";
     position:absolute;
     top:0;
-    left:-80%;
-
-    width:35px;   /* 👈 ini yang bikin tidak tebal */
+    left:-75%;
+    width:50px;
     height:100%;
-
-    background:linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.15),
-        transparent
-    );
-
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
     transform:skewX(-20deg);
-    animation:shineMove 2.8s linear infinite;
+    animation:shine 3s infinite;
 }
 
-@keyframes shineMove{
-    0%{
-        left:-80%;
-    }
-    100%{
-        left:140%;
-    }
+@keyframes shine{
+    0%{left:-75%}
+    100%{left:130%}
 }
 
-/* hover efek halus */
-.copy-btn:hover{
-    box-shadow:0 0 20px rgba(14,165,233,0.5),
-               0 10px 25px rgba(0,0,0,0.25);
-}
-
-#copyBtn:active{
-    opacity:0.92;
-}
-
+/* SUCCESS */
 .copy-btn.success{
-
-    background:linear-gradient(135deg,#16a34a,#22c55e) !important;
-
-    border-color:#4ade80;
-
-    box-shadow:
-        0 12px 25px rgba(0,0,0,.3),
-        0 0 20px rgba(34,197,94,.45);
-
+    background: linear-gradient(135deg,#16a34a,#22c55e);
 }
 
-@keyframes premiumShine{
-    0%{
-        left:-70%;
-    }
-    45%{
-        left:140%;
-    }
-    100%{
-        left:140%;
-	}
-	
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    body{
-        padding:20px 12px;
-    }
-
-    .title{
-        font-size:28px;
-    }
-
-    .title::after{
-        width:100px;
-    }
-
-    .note-box{
-        font-size:13px;
-        padding:14px;
-    }
-
-    .main-box{
-        padding:18px;
-    }
-
-    .input-area{
-        min-height:130px;
-        font-size:22px;
-    }
-
-    th{
-        font-size:11px;
-        padding:12px 6px;
-    }
-
-    td{
-        font-size:12px;
-        height:60px;
-    }
-
-    .copy-btn{
-        width:100%;
-        font-size:18px;
-    }
-
-}
-
-
-td input{
-    width:100%;
-    height:100%;
-
-    border:none;
-    outline:none;
-
-    background:transparent;
-
-    text-align:center;
-
-    font-size:14px;
-    font-weight:600;
-
-    padding:10px;
-
-    color:#111827;
-}
-
-td input::placeholder{
-    color:#94a3b8;
-}
-
-td select{
-    width:100%;
-    height:100%;
-
-    border:none;
-    outline:none;
-
-    background:white;   /* FIX penting */
-    
-    text-align:center;
-
-    font-size:14px;
-    font-weight:600;
-
-    color:#111827;
-
-    cursor:pointer;
-
-    appearance:auto; /* biar arrow tetap muncul */
-    padding:6px;
-}
-
-td{
-    position:relative;
-}
-
-td select{
-    background:white;
-    border-radius:6px;
-}
-
-td select option{
-    font-weight:600;
-}
-
-
-td select {
-    background:white;
-    color:#111827;
-    opacity:1;
-    visibility:visible;
-}
-
-thead tr:first-child th:first-child{
-    border-top-left-radius:16px;
-}
-
-thead tr:first-child th:last-child{
-    border-top-right-radius:16px;
-}
-
-tbody tr:last-child td:first-child{
-    border-bottom-left-radius:16px;
-}
-
-tbody tr:last-child td:last-child{
-    border-bottom-right-radius:16px;
-}
-
-/* © 2026 | BY YOGIK */
+/* BRAND */
 .brand{
-    
-    margin-top: 15px;
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(96,165,250,0.8);
-    font-size: 11px;
-    font-weight: bold;
-}
+    margin-top:14px;
 
+    display:block;
+    width:fit-content;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    font-size:9px;
+
+    font-weight:600;
+    letter-spacing:0.6px;
+
+    color:rgba(255,255,255,0.9);
+
+    padding:2px 6px;   
+
+    border-radius:6px;
+
+    border:1px solid rgba(96,165,250,0.25);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+	text-shadow:
+    0 1px 2px rgba(0,0,0,0.8),
+    0 0 8px rgba(255,255,255,0.15);
+}
 </style>
 </head>
 
@@ -442,29 +271,30 @@ tbody tr:last-child td:last-child{
 <div class="container">
 
     <div class="title">
+	<img src="bg/gambar3.jpg" alt="Logo" class="title-logo">
         BONUS FREESPIN
     </div>
 
 
     <div class="main-box">
 
-        <textarea class="input-area" placeholder="Masukkan Data..."></textarea>
+        <textarea class="input-area" placeholder="Masukkan Data . . ."></textarea>
 
         <div class="table-wrapper">
 
             <table>
 
 <colgroup>
-    <col style="width: 10%;">
-    <col style="width: 12%;">
-    <col style="width: 12%;">
-    <col style="width: 10%;">
-    <col style="width: 10%;">
-    <col style="width: 10%;">
-    <col style="width: 12%;">
-    <col style="width: 10%;">
-    <col style="width: 8%;">
-    <col style="width: 16%;">
+    <col style="width:120px;">
+    <col style="width:130px;">
+    <col style="width:150px;">
+    <col style="width:140px;">
+    <col style="width:180px;">
+    <col style="width:120px;">
+    <col style="width:160px;">
+    <col style="width:140px;">
+    <col style="width:140px;">
+    <col style="width:160px;">
 </colgroup>
 
                 <thead>
@@ -540,6 +370,7 @@ tbody tr:last-child td:last-child{
         </button>
 
     </div>
+	
 
 <div class="brand">
     © 2026 | BY YOGIK
